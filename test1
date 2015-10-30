@@ -1,0 +1,27 @@
+#!/bin/sh
+overlook()
+{
+    clear
+    cd /
+    ls -al
+}
+
+#main()
+echo "welcome !"
+echo "####################################"
+echo "minitools"
+echo "####################################"
+while true
+do
+read MAINCMD
+case $MAINCMD in
+F|f)
+    overlook;;
+l|L)
+    overlook;;
+e|E)
+    exit 0;;
+*)
+    echo "eorr maincmd '$MAINCMD'";;
+esac
+done
