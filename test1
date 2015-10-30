@@ -11,6 +11,11 @@ echo "welcome !"
 echo "####################################"
 echo "minitools"
 echo "####################################"
+  
+
+echo "err input"
+echo "'$*'"
+
 while true
 do
 read MAINCMD
