@@ -2,7 +2,6 @@
 overlook()
 {
     clear
-    cd /
     ls -al
 }
 
@@ -13,12 +12,15 @@ echo "minitools"
 echo "####################################"
   
 
-echo "err input"
-echo "'$*'"
 
 while true
 do
 read MAINCMD
+# test the input
+if [ MAINCMD != [f,l,e,F,L,E] ]
+then
+    echo err input
+fi
 case $MAINCMD in
 F|f)
     overlook;;
