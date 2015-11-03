@@ -1,10 +1,15 @@
 #!/bin/sh
 overlook()
 {
-    clear
     ls -al
 }
-
+ 
+cdfunction()
+{
+    echo "the dir is $1"  
+    cd $1;echo "pwd is `pwd`"
+    overlook
+}
 #main()
 echo "welcome !"
 echo "####################################"
@@ -17,7 +22,7 @@ while true
 do
 read MAINCMD
 # test the input
-if [ MAINCMD != [f,l,e,F,L,E] ]
+if [ MAINCMD != [f,l,e,F,L,E,c] ]
 then
     echo err input
 fi
@@ -28,6 +33,9 @@ l|L)
     overlook;;
 e|E)
     exit 0;;
+c)
+    read DIR
+    cdfunction $DIR;;
 *)
     echo "eorr maincmd '$MAINCMD'";;
 esac
