@@ -8,24 +8,22 @@ cdfunction()
 {
     echo "the dir is $1"  
     cd $1;echo "pwd is `pwd`"
-    overlook
 }
 #main()
+clear
 echo "welcome !"
 echo "####################################"
 echo "minitools"
 echo "####################################"
+echo "f -> find , l -> ls , e -> exit ,c -> cd "
   
 
 
 while true
 do
+echo "input a char"
 read MAINCMD
 # test the input
-if [ MAINCMD != [f,l,e,F,L,E,c] ]
-then
-    echo err input
-fi
 case $MAINCMD in
 F|f)
     overlook;;
@@ -34,6 +32,7 @@ l|L)
 e|E)
     exit 0;;
 c)
+    echo "input a dir"
     read DIR
     cdfunction $DIR;;
 *)
