@@ -34,6 +34,22 @@ do
     echo "************************************"
 done
 
+# test the select in 
+select var2 in aa bb cc
+do
+    echo "$var2"
+    break
+done
+
+#test until 
+n=0
+until [ $n -eq 3 ] 
+do
+# 如果是用的数字变量的话要要通过let，然后就是要用“”来屏蔽+的原来的作用。
+    let "n=n+1" 
+    echo "**************"
+done   
+
 while true
 do
 echo "input a char"
