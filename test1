@@ -16,8 +16,23 @@ echo "####################################"
 echo "minitools"
 echo "####################################"
 echo "f -> find , l -> ls , e -> exit ,c -> cd "
-  
+# test list for
+for var in  a b c  
+do
+    echo "############### $var ###################"
+done
 
+# test  for
+# the name of var is nothing ,it depend on $#
+for bb  
+do
+    echo "##################################"
+done
+# need sudo dpkg-reconfigure dash; ubuntu use the dash 
+for((i=1;i<10;i++)) 
+do
+    echo "************************************"
+done
 
 while true
 do
