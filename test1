@@ -24,6 +24,12 @@ do
 echo "input a char"
 read MAINCMD
 # test the input
+if [ $MAINCMD = f -o $MAINCMD = l -o $MAINCMD = e -o $MAINCMD = m ]
+then
+    echo "the MAINCMD is ok "
+else
+    echo "the MAINCMD is err ,you put $MAINCMD "
+fi
 case $MAINCMD in
 F|f)
     overlook;;
@@ -31,7 +37,12 @@ l|L)
     overlook;;
 e|E)
     exit 0;;
-c)
+m|M)
+   echo "put a name "
+   read fname
+   `touch $fname`
+   echo "make success";;
+c|C)
     echo "input a dir"
     read DIR
     cdfunction $DIR;;
