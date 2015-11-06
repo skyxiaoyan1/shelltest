@@ -21,7 +21,7 @@ for var in  a b c
 do
     echo "############### $var ###################"
 done
-
+#
 # test  for
 # the name of var is nothing ,it depend on $#
 for bb  
